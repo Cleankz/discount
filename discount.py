@@ -21,10 +21,13 @@ def MaximumDiscount(N, price):
                 if len(price) == 3:
                     min =price[2]
                     break
-                if j != 3 and min >= price[j]:
+                if j != 6 or j != 3 and min >= price[j]:
                     min = price[j]
             min_sum = min_sum + min
             del price[0:3]
             if len(price) < 2:
-                break
+                break 
+        return min_sum
+    elif N < 3:
+        min_sum = 0
         return min_sum
