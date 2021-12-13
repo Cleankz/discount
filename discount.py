@@ -17,7 +17,7 @@ def MaximumDiscount(N, price):
         min_sum = 0
         for i in range(free_item):
             min = price[0]
-            for j in range(free_item+1):
+            for j in range(3):
                 if len(price) == 3:
                     min =price[2]
                     break
