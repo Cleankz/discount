@@ -14,7 +14,6 @@ def MaximumDiscount(N, price):
                     price[i], price[i+1] = price[i+1], price[i]
                     xchange = True
         free_item = N // 3
-        min_sum = 0
         for i in range(free_item):
             min = price[0]
             for j in range(3):
@@ -23,6 +22,7 @@ def MaximumDiscount(N, price):
                     break
                 if j != 6 or j != 3 and min >= price[j]:
                     min = price[j]
+            min_sum = 0
             min_sum = min_sum + min
             del price[0:3]
             if len(price) < 2:
